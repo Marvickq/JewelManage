@@ -1,0 +1,10 @@
+{
+  "name": "jewelmanage",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build:recommender": "g++ cpp/recommendation_engine.cpp -O2 -std=c++17 -o bin/recommendation_engine.exe"
+  }
+}

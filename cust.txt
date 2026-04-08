@@ -1,0 +1,32 @@
+async function renderCustomers() {
+    appRoot.innerHTML = `
+      <div class="grid-2">
+        ${shell("Add Customer", "", `
+          <form id="customers-form" class="stack-form">
+            <label><span>Name</span><input name="name" required /></label>
+            <label><span>Phone (optional)</span><input name="phone" /></label>
+            <label><span>Age</span><input type="number" min="1" max="120" name="age" required /></label>
+            
+          <label>
+            <span>Customer Photo (Camera)</span>
+            <div id="camera-container" style="display:flex; flex-direction:column; gap:8px;">
+              <video id="camera-stream" width="100%" height="auto" autoplay playsinline style="background:#000; border-radius: 8px; display:none;"></video>
+              <canvas id="camera-canvas" style="display:none;"></canvas>
+              <img id="photo-preview" src="" style="display:none; width: 100%; border-radius: 8px;"/>
+              <input type="hidden" name="photo" id="photo-data" />
+              <button type="button" id="start-camera-btn" style="background:var(--color-cyan); color:black; border:none; padding:8px; border-radius:4px; cursor:pointer;">Start Camera</button>
+              <button type="button" id="take-photo-btn" style="display:none; background:var(--color-black); color:var(--color-cyan); border:1px solid var(--color-cyan); padding:8px; border-radius:4px; cursor:pointer;">Capture Photo</button>
+            </div>
+          </label>
+          <button type="submit">Save Customer</button>
+  
+            <p id="customers-status" class="status-line"></p>
+          </form>
+        `)}
+        ${shell("Customers", "", `
+          <div id="customers-table">${loadingCard("Loading customers...")}</div>
+        `)}
+      </div>
+    `;
+
+    bindForm("customers-form", "/api/customers"

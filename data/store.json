@@ -1,0 +1,497 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "owner@jewelmanage.com",
+      "password": "admin123",
+      "name": "Owner"
+    },
+    {
+      "id": 2,
+      "email": "lol@gmail.com",
+      "password": "lol@123",
+      "name": "lol"
+    },
+    {
+      "id": 3,
+      "email": "mann@gmail.com",
+      "password": "mann@19",
+      "name": "My Shop"
+    },
+    {
+      "id": 4,
+      "email": "mom@gmail.com",
+      "password": "mom12",
+      "name": "mom"
+    },
+    {
+      "id": 5,
+      "email": "demo@gmail.com",
+      "password": "demo123",
+      "name": "My Demo Shop"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Pendant",
+      "material": "Gold",
+      "price": 1000,
+      "createdAt": "2026-03-31T16:05:15.937Z"
+    },
+    {
+      "id": 2,
+      "name": "Diamond Ring",
+      "material": "Rose Gold",
+      "price": 20000000,
+      "createdAt": "2026-04-01T08:34:25.960Z"
+    },
+    {
+      "id": 3,
+      "ownerId": 1,
+      "name": "Waist Band",
+      "material": "Platinum",
+      "price": 90000,
+      "createdAt": "2026-04-07T02:35:23.187Z"
+    },
+    {
+      "id": 4,
+      "ownerId": 1,
+      "name": "Gold Earring NK-GLD-1023",
+      "material": "Gold",
+      "price": 239.59,
+      "createdAt": "2026-04-08T09:05:49.149Z"
+    },
+    {
+      "id": 5,
+      "ownerId": 5,
+      "name": "Gold Earring NK-GLD-1023",
+      "material": "Gold",
+      "price": 239.59,
+      "createdAt": "2026-04-08T09:52:06.172Z"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Mann",
+      "phone": "7841071109",
+      "age": 20,
+      "createdAt": "2026-03-31T16:05:33.262Z"
+    },
+    {
+      "id": 2,
+      "name": "Mann",
+      "phone": "7841071109",
+      "age": 20,
+      "createdAt": "2026-03-31T16:08:13.382Z"
+    },
+    {
+      "id": 3,
+      "name": "Rishita",
+      "phone": "9967563425",
+      "age": 20,
+      "createdAt": "2026-04-01T08:34:55.119Z"
+    },
+    {
+      "id": 4,
+      "ownerId": 1,
+      "name": "Rohan Malhotra",
+      "phone": "8612330473",
+      "age": 44,
+      "photo": "",
+      "createdAt": "2026-04-07T02:34:37.488Z"
+    },
+    {
+      "id": 5,
+      "ownerId": 1,
+      "name": "Susan Bates",
+      "phone": "1098123490",
+      "age": 67,
+      "createdAt": "2026-04-08T09:08:17.140Z"
+    },
+    {
+      "id": 6,
+      "ownerId": 5,
+      "name": "Rishita",
+      "phone": "7841071109",
+      "age": 21,
+      "createdAt": "2026-04-08T09:52:18.431Z"
+    }
+  ],
+  "purchases": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "customerName": "Mann",
+      "selectedAge": 20,
+      "productId": 1,
+      "productName": "Pendant",
+      "amount": 1000,
+      "createdAt": "2026-03-31T16:05:55.969Z"
+    },
+    {
+      "id": 2,
+      "customerId": 3,
+      "customerName": "Rishita",
+      "selectedAge": 20,
+      "productId": 2,
+      "productName": "Diamond Ring",
+      "amount": 20000000,
+      "createdAt": "2026-04-01T08:35:36.306Z"
+    },
+    {
+      "id": 3,
+      "ownerId": 1,
+      "customerId": 4,
+      "customerName": "Rohan Malhotra",
+      "selectedAge": 44,
+      "productId": 3,
+      "productName": "Waist Band",
+      "amount": 2,
+      "createdAt": "2026-04-07T02:35:57.566Z"
+    },
+    {
+      "id": 4,
+      "ownerId": 1,
+      "customerId": 5,
+      "customerName": "Susan Bates",
+      "selectedAge": 67,
+      "productId": 4,
+      "productName": "Gold Earring NK-GLD-1023",
+      "amount": 1,
+      "createdAt": "2026-04-08T09:08:34.499Z"
+    },
+    {
+      "id": 5,
+      "ownerId": 1,
+      "customerId": 5,
+      "customerName": "Susan Bates",
+      "selectedAge": 67,
+      "productId": 3,
+      "productName": "Waist Band",
+      "amount": 1,
+      "createdAt": "2026-04-08T09:13:50.546Z"
+    },
+    {
+      "id": 6,
+      "ownerId": 5,
+      "customerId": 6,
+      "customerName": "Rishita",
+      "selectedAge": 21,
+      "productId": 5,
+      "productName": "Gold Earring NK-GLD-1023",
+      "amount": 1,
+      "createdAt": "2026-04-08T09:52:47.861Z"
+    }
+  ],
+  "recommendationHistory": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "selectedAge": 20,
+      "generatedAt": "2026-03-31T16:06:04.317Z",
+      "results": [
+        {
+          "productId": 1,
+          "name": "Pendant",
+          "material": "Gold",
+          "price": 1000,
+          "score": 1756.6,
+          "priceLabel": "₹1,000.00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "customerId": 3,
+      "selectedAge": 20,
+      "generatedAt": "2026-04-01T08:35:55.818Z",
+      "results": [
+        {
+          "productId": 2,
+          "name": "Diamond Ring",
+          "material": "Rose Gold",
+          "price": 20000000,
+          "score": 35000000,
+          "priceLabel": "₹2,00,00,000.00"
+        },
+        {
+          "productId": 1,
+          "name": "Pendant",
+          "material": "Gold",
+          "price": 1000,
+          "score": 1751,
+          "priceLabel": "₹1,000.00"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "customerId": 4,
+      "selectedAge": 44,
+      "generatedAt": "2026-04-07T02:36:12.149Z",
+      "results": [
+        {
+          "productId": 2,
+          "name": "Diamond Ring",
+          "material": "Rose Gold",
+          "price": 20000000,
+          "score": 5000000,
+          "priceLabel": "₹2,00,00,000.00"
+        },
+        {
+          "productId": 1,
+          "name": "Pendant",
+          "material": "Gold",
+          "price": 1000,
+          "score": 251,
+          "priceLabel": "₹1,000.00"
+        },
+        {
+          "productId": 3,
+          "name": "Waist Band",
+          "material": "Platinum",
+          "price": 90000,
+          "score": 10.1,
+          "priceLabel": "₹90,000.00"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "customerId": 3,
+      "selectedAge": 44,
+      "generatedAt": "2026-04-07T11:36:14.848Z",
+      "results": [
+        {
+          "productId": 2,
+          "name": "Diamond Ring",
+          "material": "Rose Gold",
+          "price": 20000000,
+          "score": 5000010,
+          "priceLabel": "₹2,00,00,000.00"
+        },
+        {
+          "productId": 1,
+          "name": "Pendant",
+          "material": "Gold",
+          "price": 1000,
+          "score": 251,
+          "priceLabel": "₹1,000.00"
+        },
+        {
+          "productId": 3,
+          "name": "Waist Band",
+          "material": "Platinum",
+          "price": 90000,
+          "score": 4.5,
+          "priceLabel": "₹90,000.00"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "customerId": 4,
+      "selectedAge": 44,
+      "generatedAt": "2026-04-07T11:36:27.263Z",
+      "results": [
+        {
+          "productId": 2,
+          "name": "Diamond Ring",
+          "material": "Rose Gold",
+          "price": 20000000,
+          "score": 5000000,
+          "priceLabel": "₹2,00,00,000.00"
+        },
+        {
+          "productId": 1,
+          "name": "Pendant",
+          "material": "Gold",
+          "price": 1000,
+          "score": 251,
+          "priceLabel": "₹1,000.00"
+        },
+        {
+          "productId": 3,
+          "name": "Waist Band",
+          "material": "Platinum",
+          "price": 90000,
+          "score": 10.1,
+          "priceLabel": "₹90,000.00"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "customerId": 5,
+      "selectedAge": 67,
+      "generatedAt": "2026-04-08T09:08:44.854Z",
+      "results": [
+        {
+          "productId": 2,
+          "name": "Diamond Ring",
+          "material": "Rose Gold",
+          "price": 20000000,
+          "score": 5000000,
+          "priceLabel": "₹2,00,00,000.00"
+        },
+        {
+          "productId": 1,
+          "name": "Pendant",
+          "material": "Gold",
+          "price": 1000,
+          "score": 252.6,
+          "priceLabel": "₹1,000.00"
+        },
+        {
+          "productId": 4,
+          "name": "Gold Earring NK-GLD-1023",
+          "material": "Gold",
+          "price": 239.59,
+          "score": 8.35,
+          "priceLabel": "₹239.59"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "customerId": 5,
+      "selectedAge": 67,
+      "generatedAt": "2026-04-08T09:13:59.303Z",
+      "results": [
+        {
+          "productId": 2,
+          "name": "Diamond Ring",
+          "material": "Rose Gold",
+          "price": 20000000,
+          "score": 5000000,
+          "priceLabel": "₹2,00,00,000.00"
+        },
+        {
+          "productId": 1,
+          "name": "Pendant",
+          "material": "Gold",
+          "price": 1000,
+          "score": 252.6,
+          "priceLabel": "₹1,000.00"
+        },
+        {
+          "productId": 3,
+          "name": "Waist Band",
+          "material": "Platinum",
+          "price": 90000,
+          "score": 8.85,
+          "priceLabel": "₹90,000.00"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "customerId": 6,
+      "selectedAge": 21,
+      "generatedAt": "2026-04-08T09:52:58.928Z",
+      "results": [
+        {
+          "productId": 5,
+          "name": "Gold Earring NK-GLD-1023",
+          "material": "Gold",
+          "price": 239.59,
+          "score": 8.35,
+          "priceLabel": "₹239.59"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "customerId": 5,
+      "selectedAge": 67,
+      "generatedAt": "2026-04-08T09:53:33.329Z",
+      "results": [
+        {
+          "productId": 2,
+          "name": "Diamond Ring",
+          "material": "Rose Gold",
+          "price": 20000000,
+          "score": 5000000,
+          "priceLabel": "₹2,00,00,000.00"
+        },
+        {
+          "productId": 1,
+          "name": "Pendant",
+          "material": "Gold",
+          "price": 1000,
+          "score": 252.6,
+          "priceLabel": "₹1,000.00"
+        },
+        {
+          "productId": 3,
+          "name": "Waist Band",
+          "material": "Platinum",
+          "price": 90000,
+          "score": 8.85,
+          "priceLabel": "₹90,000.00"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "customerId": 5,
+      "selectedAge": 67,
+      "generatedAt": "2026-04-08T09:53:56.918Z",
+      "results": [
+        {
+          "productId": 2,
+          "name": "Diamond Ring",
+          "material": "Rose Gold",
+          "price": 20000000,
+          "score": 5000000,
+          "priceLabel": "₹2,00,00,000.00"
+        },
+        {
+          "productId": 1,
+          "name": "Pendant",
+          "material": "Gold",
+          "price": 1000,
+          "score": 252.6,
+          "priceLabel": "₹1,000.00"
+        },
+        {
+          "productId": 3,
+          "name": "Waist Band",
+          "material": "Platinum",
+          "price": 90000,
+          "score": 8.85,
+          "priceLabel": "₹90,000.00"
+        }
+      ]
+    }
+  ],
+  "ownerRevenue": [
+    {
+      "ownerId": 1,
+      "daily": {
+        "2026-04-07": 180000,
+        "2026-04-08": 90239.59
+      }
+    },
+    {
+      "ownerId": 2,
+      "daily": {}
+    },
+    {
+      "ownerId": 3,
+      "daily": {}
+    },
+    {
+      "ownerId": 4,
+      "daily": {}
+    },
+    {
+      "ownerId": 5,
+      "daily": {
+        "2026-04-08": 239.59
+      }
+    }
+  ]
+}

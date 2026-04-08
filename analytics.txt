@@ -1,0 +1,64 @@
+async function renderAnalytics() {
+    appRoot.innerHTML = `
+      ${shell("Top 5 Most Purchased Products", "Analytics across all customer purchase intersections.", `
+        <div id="analytics-table">${loadingCard("Loading analytics...")}</div>
+      `)}
+    `;
+
+    const container = document.getElementById("analytics-table");
+    const analytics = await apiFetch("/api/analytics");
+
+    if (!analytics.length) {
+      container.innerHTML = emptyCard("No analytics yet. Add purchases to generate insights.");
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Material</th>
+              <th>Total Units</th>
+              <th>Purchase Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${analytics.map((item) => `
+              <tr>
+                <td>${escapeHtml(item.name)}</td>
+                <td>${escapeHtml(item.material)}</td>
+                <td>${item.totalUnits}</td>
+                <td>${item.purchaseCount}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function fillSelect(id, items, placeholder, mapItem) {
+    const select = document.getElementById(id);
+    if (!select) {
+      return;
+    }
+
+    const options = [`<option value="">${placeholder}</option>`];
+    items.forEach((item) => {
+      const mapped = mapItem(item);
+      options.push(`<option value="${mapped.value}">${escapeHtml(String(mapped.label))}</option>`);
+    });
+    select.innerHTML = options.join("");
+  }
+
+  function bindForm(formId, endpoint, buildPayload, statusId, onSuccess) {
+    const form = document.getElementById(formId);
+    const status = document.getElementById(statusId);
+
+    if (!form || !status) {
+      return;
+    }
+
+    form.addEventListener("submit", async
