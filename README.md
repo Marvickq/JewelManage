@@ -1,4 +1,5 @@
 #JewelManage — Algorithm-Based Jewellery SaaS Platform
+
 Overview
 JewelManage is a multi-tenant SaaS platform designed for jewellery shop owners to manage inventory, track repeat customers, and generate personalized recommendations using C++ algorithms.
 
